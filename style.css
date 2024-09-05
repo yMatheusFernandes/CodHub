@@ -61,7 +61,7 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 20px;
+    padding: 40px 20px;
     text-align: center;
     background-color: #F8F9FA;
 }
@@ -74,7 +74,7 @@ nav ul li a:hover {
 
 .hero p {
     font-size: 1.2rem;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 .hero-container {
     display: flex;
@@ -82,6 +82,17 @@ nav ul li a:hover {
     align-items: center;
     padding: 50px;
 }
+.hero-item {
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.hero-item:hover {
+    border-color: #3498DB; /* Borda azul ao passar o mouse */
+}
+
 
 .hero-item {
     width: 45%;
@@ -103,6 +114,10 @@ nav ul li a:hover {
 
 .cta-button:hover {
     background-color: #16A085;
+}
+.foto{
+    width: 300px;
+    border-radius: 30px;
 }
 
 /* Sobre Nós */
