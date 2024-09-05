@@ -1,0 +1,286 @@
+/*Azul Petróleo (#2C3E50)
+ Cinza Claro (#ECF0F1)
+ Verde Menta (#1ABC9C)
+ Branco Puro (#FFFFFF)
+ Cinza Escuro (#7F8C8D)
+*/
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F8F9FA;
+    color: #7F8C8D;
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #34495E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1ABC9C;
+}
+
+
+/* Seção Principal */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #F8F9FA;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #34495E;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.hero-item {
+    width: 45%;
+}
+
+.cta-button {
+    margin-top: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1ABC9C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #16A085;
+}
+
+/* Sobre Nós */
+.about-us {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    width: 45%;
+    margin: 10px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    color: #34495E;
+}
+
+.about-text p {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Portfólio */
+.portfolio {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.portfolio h2 {
+    color: #34495E;
+    font-size: 2rem;
+}
+
+.portfolio p {
+    margin: 20px 0;
+}
+
+/* Habilidades */
+.skills {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    flex-wrap: wrap;
+}
+
+.skills-column {
+    width: 45%;
+    margin: 10px;
+}
+
+.skills-column h3 {
+    font-size: 1.5rem;
+    color: #34495E;
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    background-color: #7F8C8D;
+    border-radius: 25px;
+    margin-bottom: 15px;
+}
+
+.skill-level {
+    height: 20px;
+    border-radius: 25px;
+}
+
+.skill-html {
+    background-color: #1ABC9C;
+    width: 90%;
+}
+
+.skill-css {
+    background-color: #E74C3C;
+    width: 85%;
+}
+
+.skill-js {
+    background-color: #1ABC9C;
+    width: 80%;
+}
+
+.skill-design {
+    background-color: #E74C3C;
+    width: 95%;
+}
+
+/* Depoimentos */
+.testimonials {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #34495E;
+    font-size: 2rem;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+    min-width: 300px;
+    margin-right: 15px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    scroll-snap-align: start;
+}
+
+/* Formulário de Contato */
+.contact-form {
+    padding: 50px;
+    text-align: center;
+}
+
+.contact-form form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #34495E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #2C3E50;
+}
+
+/* Rodapé */
+footer {
+    background-color: #34495E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-text, .skills-column {
+        width: 100%;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+}
