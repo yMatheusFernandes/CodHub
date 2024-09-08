@@ -1,6 +1,6 @@
 /*Azul Petróleo (#2C3E50)
- Cinza Claro (#ECF0F1)
- Verde Menta (#1ABC9C)
+ Cinza Claro (#272D2D)
+Azul Escuro (#34495E) 
  Branco Puro (#FFFFFF)
  Cinza Escuro (#7F8C8D)
 */
@@ -12,25 +12,33 @@
   padding: 0;
   box-sizing: border-box;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f8f9fa;
+  background-color: #272d2d;
   color: #7f8c8d;
   scroll-behavior: smooth;
 }
 
 /* Cabeçalho */
 header {
-  /*background-color: #34495e;*/
-  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#fffdfd;
+  border: 3px solid #333;
+ border-bottom-right-radius:20px ;
+  border-bottom-left-radius: 20px;
   
- border-bottom-left-radius: 10px;
- border-bottom-right-radius: 10px;
-  color: white;
-  padding: 20px;
+  width: 1000px;
+ margin-left: 15%;
+  padding: 15px;
   text-align: center;
- /* position: sticky;*/
   top: 0;
   z-index: 1000;
 }
@@ -51,17 +59,30 @@ nav ul li {
 }
 
 nav ul li a {
-  color:#34495e ;
+  color:#2C3E50 ;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #1abc9c;
+  background-color: #333;
+  border: 2px solid #333;
+  border-radius: 20px;
+  padding: 5px;
+  color: #7F8C8D;
+  
 }
 .Cabeçalho{
   margin-left: 0px;
+}
+.logo{
+  position: relative;
+  font-size: 50px;
+  right: 90px;
+  top: 5px;
+  color: #2c3e50;
+  
 }
 
 /* Seção Principal */
@@ -69,14 +90,14 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #272d2d;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #34495e;
+  color: rgb(36, 34, 34);
 }
 
 .hero p {
@@ -91,7 +112,7 @@ nav ul li a:hover {
 }
 
 .hero-item {
-  background-color: #f3f3f3; /* Cor de fundo atrás de cada item */
+  background-color: #fffdfd; /* Cor de fundo atrás de cada item */
   border: 2px solid transparent;
   border-radius: 10px;
   cursor: pointer;
@@ -103,7 +124,7 @@ nav ul li a:hover {
   width: 300px;
 }
 .hero-item2 {
-  background-color: #f3f3f3; /* Cor de fundo atrás de cada item */
+  background-color: #fffdfd; /* Cor de fundo atrás de cada item */
   border: 2px solid transparent;
   border-radius: 10px;
   cursor: pointer;
@@ -117,6 +138,7 @@ nav ul li a:hover {
 
 .hero-item:hover {
   border-color: rgb(14, 13, 13);
+ 
   margin: 30px;
   transform: scale(1.1); 
   
@@ -192,25 +214,27 @@ nav ul li a:hover {
 /* Portfólio */
 .portfolio {
   padding: 50px;
-  background-color: #f1f1f1;
+  background: rgb(2,0,36);
+background: linear-gradient(360deg, rgba(0,212,255,1) 35%, rgba(0,212,255,1) 70%, rgba(0,212,255,1) 100%);
+  /*background-color: #263147;*/
   text-align: center;
  z-index: 100;
 }
 
 .portfolio h2 {
-  color: #34495e;
+  color: #fff;
   font-size: 2rem;
 }
 
 .portfolio p {
   margin: 20px 0;
+  color: #fff;
 }
 .janela{
   display: flex;
-  justify-content: center;
+  justify-content: space-around; /* Espaço entre a cloud e a window */
   align-items: center;
   margin-left: 8%;
-  
   border-radius: 20px;
   width: 1100px;
   height: 600px;;
@@ -218,10 +242,11 @@ nav ul li a:hover {
 
 
 .mac-window {
+  
   width: 900px;
   height: 500px;
   border-radius: 12px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #272d2d;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -230,12 +255,12 @@ nav ul li a:hover {
 
 
 .mac-window-header {
-  background-color: #e0e0e0;
+  background-color: #272d2d;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #d0d0d0;
+  border-bottom: 1px solid #272d2d;
 }
 
 
@@ -265,7 +290,7 @@ nav ul li a:hover {
   margin-right: 50px;
   text-align: center;
   font-size: 14px;
-  color: #555;
+  color: #e4e4e4;
 }
 
 
@@ -287,6 +312,12 @@ nav ul li a:hover {
 
 .mac-window-image:hover {
   transform: scale(1.05);
+}
+.cloud{
+ position: relative;
+ bottom: 530px;
+ left: 1000px;
+z-index: 3;
 }
 
 /* Habilidades */
@@ -343,12 +374,12 @@ nav ul li a:hover {
 /* Depoimentos */
 .testimonials {
   padding: 50px;
-  background-color: #f1f1f1;
+  background-color: #272d2d;
   text-align: center;
 }
 
 .testimonials h2 {
-  color: #34495e;
+  color: #fff;
   font-size: 2rem;
 }
 
@@ -402,10 +433,15 @@ nav ul li a:hover {
 
 /* Rodapé */
 footer {
-  background-color: #34495e;
+  background-color: #272d2d;
+  width: 100%;
+  height: 200%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: white;
   padding: 20px;
   text-align: center;
+  
 }
 
 footer p {
