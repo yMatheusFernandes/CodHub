@@ -388,6 +388,15 @@ background: linear-gradient(360deg, rgba(0,212,255,1) 35%, rgba(0,212,255,1) 70%
   padding: 16px;
   background-color: #ffffff;
   color: #333;
+  font-size: 20px;
+  padding-left: 50px;
+  text-align: start;
+}
+.mac-window-content2 {
+  padding: 16px;
+  background-color: #ffffff;
+  color: #333;
+  
 }
 .mac-window-image {
   display: block;
