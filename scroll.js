@@ -1,59 +1,52 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav ul li a");
-    let currentSection = 0;
-    let isScrolling = false;
+const sections = document.querySelectorAll('section'); 
+let currentSectionIndex = 0; 
 
-    // Função para marcar o link da navegação atual
-    function setActiveSection(sectionIndex) {
-        // Remover classe 'active' de todos os links
-        navLinks.forEach(link => link.classList.remove('active'));
-        // Adicionar classe 'active' ao link correspondente
-        navLinks[sectionIndex].classList.add('active');
-    }
+function scrollToSection(index) {
+    sections[index].scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
-    // Função para verificar qual seção está visível
-    function getCurrentSection() {
-        sections.forEach((section, index) => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionHeight = section.offsetHeight;
-            
-            if (sectionTop <= window.innerHeight / 2 && sectionTop + sectionHeight > window.innerHeight / 2) {
-                setActiveSection(index);
-                currentSection = index;
-            }
-        });
-    }
-
-    // Detectar rolagem e realizar a navegação step-by-step
-    window.addEventListener("wheel", (event) => {
-        if (isScrolling) return;
-
-        if (event.deltaY > 0) {
-            // Rolar para baixo
-            if (currentSection < sections.length - 1) {
-                currentSection++;
-                isScrolling = true;
-                sections[currentSection].scrollIntoView({ behavior: "smooth" });
-            }
-        } else {
-            // Rolar para cima
-            if (currentSection > 0) {
-                currentSection--;
-                isScrolling = true;
-                sections[currentSection].scrollIntoView({ behavior: "smooth" });
-            }
+window.addEventListener('wheel', (event) => {
+    if (event.deltaY > 0) {
+        
+        if (currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            scrollToSection(currentSectionIndex);
         }
+    } else {
+        
+        if (currentSectionIndex > 0) {
+            currentSectionIndex--;
+            scrollToSection(currentSectionIndex);
+        }
+    }
+});
 
-        setTimeout(() => {
-            isScrolling = false;
-            getCurrentSection(); // Atualizar a seção ativa
-        }, 1000); // Tempo em milissegundos
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown') {
+        if (currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            scrollToSection(currentSectionIndex);
+        }
+    } else if (event.key === 'ArrowUp') {
+        if (currentSectionIndex > 0) {
+            currentSectionIndex--;
+            scrollToSection(currentSectionIndex);
+        }
+    }
+});
+
+    const heroItem1 = document.querySelector('.hero-item');
+    const heroItem2 = document.querySelector('.hero-item2');
+    const macWindowContent = document.querySelector('.mac-window-content');
+    
+    heroItem1.addEventListener('click', () => {
+        macWindowContent.innerHTML = "<p>Texto exibido ao clicar no Brenno!</p>";
     });
 
-    // Chamar a função ao carregar a página
-    getCurrentSection();
+    heroItem2.addEventListener('click', () => {
+        macWindowContent.innerHTML = "<p>Texto exibido ao clicar no Matheus!</p>";
+    });
 
-    // Também verificar em caso de resize da janela
-    window.addEventListener("resize", getCurrentSection);
-});
+    
