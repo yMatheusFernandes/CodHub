@@ -45,8 +45,21 @@ window.addEventListener('keydown', (event) => {
         macWindowContent.innerHTML = "<p>Texto exibido ao clicar no Brenno!</p>";
     });
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////
+
     heroItem2.addEventListener('click', () => {
-        macWindowContent.innerHTML = "<p>Texto exibido ao clicar no Matheus!</p>";
+        macWindowContent.innerHTML = `
+
+        <ul>
+        <br>
+          <li><a href="/portf/Matheus/Mcalc.html" target="_blank">Calculadora funcional com JavaScript</a></li><br>
+          <li><a href="#" target="_blank">Coming soon...</a></li><br>
+          <li><a href="#" target="_blank">Coming soon...</a></li><br>
+          <li><a href="#" target="_blank">Coming soon...</a></li><br>
+        </ul>`;
+
     });
+
+    
 
     
