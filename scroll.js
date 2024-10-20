@@ -52,7 +52,7 @@ window.addEventListener('keydown', (event) => {
 
         <ul>
         <br>
-          <li><a href="portf/Matheus/Calculadora/index.html" target="_blank">Calculadora funcional com JavaScript</a></li><br>
+          <li><a href="portf/Matheus/Calculadora/index.html">Calculadora funcional com JavaScript</a></li><br>
           <li><a href="portf/Matheus/index.html">Coming soon...</a></li><br>
           <li><a href="#" target="_blank">Coming soon...</a></li><br>
           <li><a href="#" target="_blank">Coming soon...</a></li><br>
