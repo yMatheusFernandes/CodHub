@@ -52,14 +52,10 @@ window.addEventListener('keydown', (event) => {
 
         <ul>
         <br>
-          <li><a href="portf/Matheus/Calculadora/index.html">Calculadora funcional com JavaScript</a></li><br>
-          <li><a href="portf/Matheus/index.html">Coming soon...</a></li><br>
+          <li><a href="/ymatheusfernandes/CodeHub/portf/Matheus/Calculadora/index.html">Calculadora funcional com JavaScript</a></li><br>
+          <li><a href="/ymatheusfernandes/CodeHub/portf/Matheus/index.html">Coming soon...</a></li><br>
           <li><a href="#" target="_blank">Coming soon...</a></li><br>
           <li><a href="#" target="_blank">Coming soon...</a></li><br>
         </ul>`;
 
     });
-
-    
-
-    
