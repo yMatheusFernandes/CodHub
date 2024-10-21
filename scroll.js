@@ -46,7 +46,11 @@ window.addEventListener('keydown', (event) => {
     });
 
     heroItem2.addEventListener('click', () => {
-        macWindowContent.innerHTML = `<p><a href="portf/Matheus/Calculadora/index.html">calculadora funcional com js </a></p>`;
+        macWindowContent.innerHTML = `<p><a href="portf/Matheus/Calculadora/index.html">calculadora funcional com js </a></p>
+        <p><a href="#">coming soon...</a></p>
+        <p><a href="#">coming soon...</a></p>
+        <p><a href="#">coming soon...</a></p>
+        <p><a href="#">coming soon...</a></p>`;
     });
 
 
