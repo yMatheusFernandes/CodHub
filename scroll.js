@@ -46,7 +46,7 @@ window.addEventListener('keydown', (event) => {
     });
 
     heroItem2.addEventListener('click', () => {
-        macWindowContent.innerHTML = "<p>Texto exibido ao clicar no Matheus!</p>";
+        macWindowContent.innerHTML = `<p><a href="portf/Matheus/Calculadora/index.html">calculadora funcional com js </a></p>`;
     });
 
 
