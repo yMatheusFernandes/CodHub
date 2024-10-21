@@ -75,8 +75,49 @@ window.addEventListener('keydown', (event) => {
        typeWriterEffect(text, macWindowContent);
    });
 
+   document.addEventListener("DOMContentLoaded", function() {
+    const cloud = document.querySelector('.cloud');
+    const portfolioSection = document.querySelector('#portfolio');
+    let isCloudVisible = false;  // To track cloud visibility
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !isCloudVisible) {
+                // Section is visible, apply the fade-in class
+                cloud.classList.remove('fade-out'); // Ensure the fade-out class is removed
+                cloud.classList.add('fade-in');
+                isCloudVisible = true; // Track the visibility state
+            } else if (!entry.isIntersecting && isCloudVisible) {
+                // Section is not visible, apply the fade-out class
+                cloud.classList.remove('fade-in'); // Remove the fade-in class
+                cloud.classList.add('fade-out');   // Add the fade-out class
+                isCloudVisible = false;
+            }
+        });
+    });
+
+    // Start observing the portfolio section
+    observer.observe(portfolioSection);
+});
 
 
 
 
-    
+
+
+
+window.addEventListener('scroll', function() {
+    const contatoSection = document.getElementById('contato');
+    const nuvem = document.getElementById('nuvem');
+  
+    // Pega a posição da seção de contato em relação à viewport
+    const contatoPosition = contatoSection.getBoundingClientRect();
+  
+    // Verifica se a seção de contato está visível na tela
+    if (contatoPosition.top <= window.innerHeight && contatoPosition.bottom >= 0) {
+      // Quando a seção de contato entra na tela, faz o fadeOut da nuvem
+      nuvem.classList.add('fadeOutUp');
+      nuvem.classList.remove('fadeInUp');
+    }
+  });
+  
